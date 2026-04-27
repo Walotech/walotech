@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://tourmaline-platypus-b32cf6.netlify.app/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walotech | Desengrasantes y Limpieza Automotriz – Lima, Perú</title>
+  <meta name="description" content="Walotech: desengrasantes, sacagrasa, silicona y crema de manos automotriz. Productos de elegancia automotriz para talleres, empresas y flotas en Lima, Perú.">
+  <meta name="keywords" content="desengrasante automotriz lima, sacagrasa peru, silicona automotriz, limpieza automotriz, desengrasante dielectrico, walotech, productos automotrices peru">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://walotech.pe/">
+  <meta property="og:title" content="Walotech | Limpieza Automotriz Premium">
+  <meta property="og:description" content="Desengrasantes, sacagrasa, silicona y más. Productos de elegancia automotriz para profesionales del sector.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./walotech-site_files/css2" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#060606;--deep:#0c0c0c;--surface:#111;--card:#181818;
+      --border:rgba(255,255,255,0.08);
+      --yellow:#e8c84a;--yellow2:#f5d76e;
+      --ydim:rgba(232,200,74,0.10);--yglow:rgba(232,200,74,0.22);
+      --white:#f2f0ea;--muted:rgba(242,240,234,0.45);
+      --wa:#25D366;--r:12px;--rs:8px;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);line-height:1.65;overflow-x:hidden}
+    .dc{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.01em}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);min-height:70px}
+    .nlogo{text-decoration:none;display:flex;flex-direction:column;gap:2px;margin:8px 0}
+    .nword{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:#FFD700 !important;text-shadow:0 0 10px rgba(232,200,74,0.8),0 2px 4px rgba(0,0,0,1) !important;letter-spacing:.08em;text-transform:uppercase;line-height:1.6;position:relative;margin-top:6px}
+    .nword::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--yellow),var(--yellow2),transparent)}
+    .nsub{font-size:8px;font-weight:500;letter-spacing:.10em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+    .nlinks{display:flex;gap:28px;list-style:none}
+    .nlinks a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
+    .nlinks a:hover{color:var(--yellow)}
+    .ncta{background:var(--yellow);color:var(--black);padding:10px 22px;border-radius:var(--rs);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+    .ncta:hover{opacity:.85}
+
+    /* HERO */
+    #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 80px;position:relative;overflow:hidden}
+    .hbg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 55% at 60% 35%,rgba(232,200,74,.07) 0%,transparent 70%),radial-gradient(ellipse 35% 45% at 15% 65%,rgba(232,200,74,.04) 0%,transparent 60%)}
+    .hstripes{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(-60deg,rgba(232,200,74,.018) 0px,rgba(232,200,74,.018) 1px,transparent 1px,transparent 44px)}
+    #hero > *:not(.hbg):not(.hstripes){position:relative;z-index:1}
+    .hlabel{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;display:flex;align-items:center;gap:12px}
+    .hlabel::before{content:'';width:30px;height:2px;background:linear-gradient(90deg,var(--yellow),var(--yellow2))}
+    h1.htitle{font-size:clamp(58px,11vw,136px);margin-bottom:12px}
+    .bword{position:relative;display:inline-block;color:var(--white)}
+    .bword::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--yellow) 0%,var(--yellow2) 60%,transparent 100%);border-radius:1px}
+    .hsub{max-width:500px;font-size:17px;font-weight:300;color:rgba(242,240,234,.65);margin-bottom:44px;line-height:1.65}
+    .hact{display:flex;gap:14px;flex-wrap:wrap;position:relative;z-index:5}
+    .hstats{position:absolute;right:40px;bottom:80px;display:flex;flex-direction:column;gap:22px}
+    .hstat .num{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;color:var(--white);line-height:1}
+    .hstat .num span{color:var(--yellow)}
+    .hstat .lbl{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:right}
+    .hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px}
+    .hscroll span{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    .sline{width:1px;height:36px;background:linear-gradient(to bottom,var(--yellow),transparent);animation:sa 1.9s ease-in-out infinite}
+    @keyframes sa{0%,100%{opacity:1;transform:scaleY(1);transform-origin:top}50%{opacity:.25;transform:scaleY(.4);transform-origin:top}}
+
+    /* BUTTONS */
+    .bp{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--black);padding:16px 30px;border-radius:var(--rs);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s;pointer-events:auto;position:relative;z-index:6;cursor:pointer}
+    .bp:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--yglow)}
+    .bs{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.18);color:var(--white);padding:16px 30px;border-radius:var(--rs);font-size:14px;font-weight:500;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+    .bs:hover{border-color:var(--yellow);color:var(--yellow)}
+    .bw{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;padding:16px 30px;border-radius:var(--rs);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+    .bw:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.38)}
+    .bd{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:var(--white);padding:16px 36px;border-radius:var(--rs);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;transition:all .2s}
+    .bd:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.4)}
+
+    /* SOCIAL BAND */
+    .sband{background:var(--yellow);padding:18px 40px;display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+    .sbitem{display:flex;align-items:center;gap:10px;color:var(--black);font-weight:700;font-size:14px;letter-spacing:.04em}
+    .sbnum{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900}
+
+    /* TRUST */
+    .tbar{background:var(--surface);border-bottom:1px solid var(--border);padding:20px 40px;display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap}
+    .ti{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .tic{width:16px;height:16px;color:var(--yellow)}
+
+    /* SECTION */
+    section{padding:96px 40px}
+    .slabel{font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--yellow);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+    .slabel::before{content:'';width:24px;height:2px;background:linear-gradient(90deg,var(--yellow),var(--yellow2))}
+    .stitle{font-size:clamp(34px,5vw,58px);margin-bottom:18px}
+    .ssub{font-size:16px;font-weight:300;color:rgba(242,240,234,.55);max-width:520px;line-height:1.7;margin-bottom:56px}
+
+    /* PRODUCTS */
+    #productos{background:var(--deep)}
+    .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+    .pc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:30px 26px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
+    .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--yellow),var(--yellow2),transparent);opacity:0;transition:opacity .25s}
+    .pc:hover{transform:translateY(-4px);border-color:rgba(232,200,74,.22)}
+    .pc:hover::before{opacity:1}
+    .pf{border-color:rgba(232,200,74,.28)}
+    .pf::before{opacity:1}
+    .pico{width:46px;height:46px;background:var(--ydim);border:1px solid rgba(232,200,74,.18);border-radius:var(--rs);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+    .pico svg{width:22px;height:22px;stroke:var(--yellow);fill:none;stroke-width:1.5}
+    .pname{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;display:inline-block}
+    .pname::after{content:'';display:block;height:2px;width:40px;margin-top:4px;background:linear-gradient(90deg,var(--yellow),transparent)}
+    .pdesc{font-size:13px;font-weight:300;color:rgba(242,240,234,.58);line-height:1.65;margin:14px 0 22px}
+    .ptag{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--ydim);color:var(--yellow);border:1px solid rgba(232,200,74,.2);padding:5px 12px;border-radius:100px}
+    .pbadge{position:absolute;top:18px;right:18px;font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:var(--yellow);color:var(--black);padding:5px 12px;border-radius:100px}
+
+    /* TARGETS */
+    #para-quien{background:var(--black)}
+    .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+    .titem{background:var(--card);padding:42px 34px;transition:background .2s}
+    .titem:hover{background:var(--surface)}
+    .tnum{font-family:'Barlow Condensed',sans-serif;font-size:68px;font-weight:900;color:rgba(232,200,74,.10);line-height:1;margin-bottom:18px}
+    .tname{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;margin-bottom:10px}
+    .tdesc{font-size:13px;font-weight:300;color:rgba(242,240,234,.5);line-height:1.7}
+
+    /* PROCESS */
+    #como-funciona{background:var(--deep)}
+    .fsteps{display:flex;flex-wrap:wrap;gap:0;position:relative}
+    .fsteps::after{content:'';position:absolute;top:41px;left:56px;right:56px;height:1px;background:linear-gradient(to right,var(--yellow),transparent)}
+    .step{flex:1;min-width:190px;padding:38px 26px 34px;position:relative;z-index:1}
+    .snum{width:42px;height:42px;border-radius:50%;background:var(--card);border:1px solid var(--yellow);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;color:var(--yellow);margin-bottom:26px}
+    .stitle2{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;margin-bottom:10px}
+    .sdesc{font-size:13px;font-weight:300;color:rgba(242,240,234,.5);line-height:1.65}
+
+    /* TESTIMONIALS */
+    #testimonios{background:var(--black)}
+    .tegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+    .tecard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:30px 26px;transition:border-color .2s}
+    .tecard:hover{border-color:rgba(232,200,74,.2)}
+    .stars{display:flex;gap:4px;margin-bottom:18px}
+    .star{width:13px;height:13px;background:var(--yellow);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+    .tquote{font-size:14px;font-weight:300;color:rgba(242,240,234,.72);line-height:1.72;margin-bottom:22px;font-style:italic}
+    .tauth{display:flex;align-items:center;gap:12px}
+    .tav{width:38px;height:38px;border-radius:50%;background:var(--ydim);border:1px solid rgba(232,200,74,.28);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:700;color:var(--yellow)}
+    .tname2{font-size:13px;font-weight:600;margin-bottom:2px}
+    .trole{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+    /* CTA BAND */
+    #cta-central{background:var(--yellow);padding:80px 40px;text-align:center;position:relative;overflow:hidden}
+    #cta-central::before{content:'WALOTECH';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:clamp(80px,20vw,260px);font-weight:900;color:rgba(0,0,0,.06);letter-spacing:.05em;text-transform:uppercase;pointer-events:none}
+    #cta-central::after{content:'';position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(-60deg,rgba(0,0,0,.03) 0px,rgba(0,0,0,.03) 1px,transparent 1px,transparent 44px)}
+    .ctitle{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,6vw,70px);font-weight:900;color:var(--black);text-transform:uppercase;line-height:.95;margin-bottom:22px;position:relative;z-index:1}
+    .csub{font-size:16px;color:rgba(0,0,0,.58);max-width:460px;margin:0 auto 38px;position:relative;z-index:1}
+    .cact{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+
+    /* FAQ */
+    #faq{background:var(--deep)}
+    .flist{max-width:740px}
+    .fitem{border-bottom:1px solid var(--border);padding:26px 0}
+    .fq{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .fq::after{content:'+';font-size:22px;font-weight:300;color:var(--yellow);flex-shrink:0}
+    .fa{font-size:14px;font-weight:300;color:rgba(242,240,234,.58);line-height:1.72;margin-top:14px}
+
+    /* FOOTER */
+    footer{background:var(--surface);border-top:1px solid var(--border);padding:56px 40px 36px}
+    .ftop{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:44px}
+    .fbrand .flogo{font-family:'Barlow Condensed',sans-serif;font-size:30px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;position:relative;display:inline-block}
+    .fbrand .flogo::after{content:'';display:block;height:2px;background:linear-gradient(90deg,var(--yellow),transparent);margin-top:3px}
+    .fbrand .fsub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:8px 0 12px}
+    .fbrand p{font-size:13px;color:var(--muted);max-width:280px;line-height:1.65}
+    .flinks h4{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+    .flinks ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .flinks a{font-size:13px;color:rgba(242,240,234,.55);text-decoration:none;transition:color .2s}
+    .flinks a:hover{color:var(--yellow)}
+    .fbottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+    .fbottom p{font-size:12px;color:var(--muted)}
+
+    /* WHATSAPP FLOAT */
+    .waf{position:fixed;bottom:28px;right:28px;z-index:999;display:flex;align-items:center;gap:12px}
+    .walbl{background:var(--black);color:var(--white);padding:9px 16px;border-radius:var(--r);font-size:12px;font-weight:600;border:1px solid var(--border);white-space:nowrap;pointer-events:none;opacity:0;transform:translateX(10px);transition:all .25s}
+    .waf:hover .walbl{opacity:1;transform:translateX(0)}
+    .wabtn{width:64px;height:64px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.42);text-decoration:none;transition:transform .25s,box-shadow .25s,filter .25s;animation:wap 2.6s ease infinite}
+    .wabtn:hover{transform:scale(1.12);box-shadow:0 0 0 6px rgba(37,211,102,.22),0 10px 36px rgba(37,211,102,.78);filter:brightness(1.08)}
+    .wabtn svg{width:32px;height:32px;fill:#fff}
+    @keyframes wap{0%,100%{box-shadow:0 4px 18px rgba(37,211,102,.4)}50%{box-shadow:0 4px 34px rgba(37,211,102,.72)}}
+
+    .fu{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+    .fu.v{opacity:1;transform:translateY(0)}
+
+    @media(max-width:768px){
+      nav{padding:14px 20px}.nlinks{display:none}
+      #hero,section{padding-left:20px;padding-right:20px}
+      #hero{padding-bottom:60px}
+      .hstats{position:static;flex-direction:row;margin-top:44px;gap:28px}
+      .hstat .lbl{text-align:left}
+      #cta-central,.tbar,.sband,footer{padding-left:20px;padding-right:20px}
+      .waf{bottom:18px;right:18px}
+      .fsteps::after{display:none}
+    }
+  </style>
+<meta name="google-site-verification" content="z9CJGvNegflDsHkI6e8ZP889uNcefwS-abp4UWC8ugQ" />
+</head>
+<body>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Walotech","description":"Desengrasantes dieléctrico, siliconas premium, limpia grasas y limpia manos automotriz para talleres y flotas.","url":"https://walotech.pe","address":{"@type":"PostalAddress","addressCountry":"PE","addressLocality":"Lima"},"sameAs":["https://wa.link/yx35sb","https://www.tiktok.com/@walotech.desengrasante"]}
+</script>
+
+<!-- NAV -->
+<nav>
+  <a href="https://tourmaline-platypus-b32cf6.netlify.app/#hero" class="nlogo">
+    <span class="nword">WALOTECH</span>
+    <span class="nsub">Desengrasantes · Siliconas · Limpia Grasas · Limpia Manos</span>
+  </a>
+  <ul class="nlinks">
+    <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Productos</a></li>
+    <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#para-quien">Soluciones</a></li>
+    <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#como-funciona">Proceso</a></li>
+    <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#testimonios">Clientes</a></li>
+    <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#faq">FAQ</a></li>
+  </ul>
+  <a href="https://wa.link/yx35sb" class="ncta" target="_blank">Cotizar ahora</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-label="Inicio Walotech">
+  <div class="hbg"></div>
+  <div class="hstripes"></div>
+  <div class="hlabel">Elegancia Automotriz · Lima, Perú</div>
+  <h1 class="dc htitle">
+    <span class="bword">WALOTECH</span><br>limpia diferente.
+  </h1>
+  <p class="hsub">Desengrasantes dieléctrico, siliconas premium, limpia grasas y limpia manos. Productos automotrices de alto rendimiento para talleres, flotas y profesionales del sector.</p>
+  <div class="hact">
+    <a href="https://wa.link/yx35sb" class="bp" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.855L.057 23.885a.5.5 0 0 0 .604.605l6.08-1.476A11.935 11.935 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.935 9.935 0 0 1-5.06-1.38l-.36-.214-3.74.981.997-3.65-.235-.374A9.968 9.968 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+      Pedir por WhatsApp
+    </a>
+    <a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos" class="bs">Ver productos</a>
+  </div>
+  <div class="hstats">
+    <div class="hstat"><div class="num">4.9<span>k</span></div><div class="lbl">Seguidores TikTok</div></div>
+    <div class="hstat"><div class="num">25<span>k</span></div><div class="lbl">Me gusta orgánicos</div></div>
+    <div class="hstat"><div class="num">208<span>k</span></div><div class="lbl">Views en un video</div></div>
+  </div>
+  <div class="hscroll"><span>Scroll</span><div class="sline"></div></div>
+</section>
+
+<!-- SOCIAL PROOF BAND -->
+<div class="sband" aria-label="Presencia TikTok Walotech">
+  <div class="sbitem">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="black"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V9.04a8.28 8.28 0 0 0 4.84 1.56V7.15a4.85 4.85 0 0 1-1.07-.46z"></path></svg>
+    <span><span class="sbnum">208k</span> vistas · Video viral en TikTok</span>
+  </div>
+  <div class="sbitem">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="black"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+    <span><span class="sbnum">25k</span> me gusta orgánicos</span>
+  </div>
+  <div class="sbitem">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    <span><span class="sbnum">4,900</span> seguidores activos</span>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="tbar">
+  <div class="ti"><svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Entrega rápida Lima</div>
+  <div class="ti"><svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Calidad garantizada</div>
+  <div class="ti"><svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>Clientes exclusivos</div>
+  <div class="ti"><svg class="tic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 7.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Atención personalizada</div>
+</div>
+
+<!-- PRODUCTOS -->
+<section id="productos" aria-label="Productos Walotech - Desengrasantes, Siliconas, Limpia Grasas y Manos">
+  <div class="slabel">Línea de productos</div>
+  <h2 class="dc stitle fu">Productos que<br>hablan solos.</h2>
+  <p class="ssub fu">15 formulaciones de alto rendimiento para profesionales. Desengrasantes, siliconas, limpia grasas y más. Desde el primer uso notarás la diferencia.</p>
+  <div class="pgrid">
+
+    <!-- 1 Desengrasante Premium Dieléctrico -->
+    <div class="pc pf fu">
+      <span class="pbadge">Más vendido</span>
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+      <div class="pname">Desengrasante Premium Dieléctrico</div>
+      <p class="pdesc">No conduce electricidad. Limpia circuitos, bornes, sensores y componentes eléctricos sin dañarlos. 100% seguro para sistemas automotrices modernos. El más vendido de la línea.</p>
+      <span class="ptag">Motor y eléctrico</span>
+    </div>
+
+    <!-- 2 Removedor de Ceras -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg></div>
+      <div class="pname">Removedor de Ceras</div>
+      <p class="pdesc">Elimina ceras adheridas en carrocerías externas de camiones y vehículos de carga pesada. Acción rápida y sin daño al acabado de la pintura. Ideal antes de aplicar nuevas ceras.</p>
+      <span class="ptag">Carrocería</span>
+    </div>
+
+    <!-- 3 Limpiador Intercambiadores -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+      <div class="pname">Limpiador Intercambiadores</div>
+      <p class="pdesc">Disuelve aceites lubricantes adheridos en intercambiadores de tubos de cobre. Restaura la eficiencia térmica del sistema de enfriamiento sin dañar los tubos ni las juntas.</p>
+      <span class="ptag">Industrial</span>
+    </div>
+
+    <!-- 4 Desengrasante Multipropósito -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg></div>
+      <div class="pname">Desengrasante Multipropósito</div>
+      <p class="pdesc">Versátil y potente para todo tipo de superficies: motores, pisos, herramientas y maquinaria. Fórmula concentrada de alto rendimiento. Un solo producto para múltiples usos.</p>
+      <span class="ptag">Uso general</span>
+    </div>
+
+    <!-- 5 Desengrasante Industrial -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg></div>
+      <div class="pname">Desengrasante Industrial</div>
+      <p class="pdesc">Potente contra grasa, aceite y suciedad pesada. Para motores, cajas y zonas de alta contaminación. Fórmula biodegradable de acción rápida. Resultados visibles desde la primera aplicación.</p>
+      <span class="ptag">Motor y mecánica</span>
+    </div>
+
+    <!-- 6 Master Saca Grasas -->
+    <div class="pc fu">
+      <span class="pbadge">Gastronomía</span>
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+      <div class="pname">Master Saca Grasas</div>
+      <p class="pdesc">Ideal para pollerías, panaderías, restaurantes y cocinas industriales. Elimina la grasa más difícil de superficies, equipos y campanas extractoras. También efectivo en ropa de trabajo y uniformes.</p>
+      <span class="ptag">Gastronomía e industria</span>
+    </div>
+
+    <!-- 7 Crema Limpia Manos -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+      <div class="pname">Crema Limpia Manos</div>
+      <p class="pdesc">Contiene piedra pómez. Elimina la grasa más profunda dejando las manos aromatizadas y protegidas. Fórmula especial para mecánicos y técnicos. Protección duradera sin resecar la piel.</p>
+      <span class="ptag">Cuidado personal</span>
+    </div>
+
+    <!-- 8 Desoxidante Removedor de Óxidos -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+      <div class="pname">Desoxidante Removedor Óxidos</div>
+      <p class="pdesc">Elimina óxido y corrosión de piezas metálicas, tornillos, tuberías y estructuras. Reactiva y prepara la superficie para su tratamiento posterior. Recupera piezas que parecían perdidas.</p>
+      <span class="ptag">Metales y estructuras</span>
+    </div>
+
+    <!-- 9 Silicona Cristal Automotriz -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+      <div class="pname">Silicona Cristal Automotriz</div>
+      <p class="pdesc">Dieléctrica, no contiene agua. Protege y da brillo cristalino a plásticos, gomas y tableros. Repele el polvo y el agua por más tiempo. Ideal para sistemas eléctricos y componentes sensibles.</p>
+      <span class="ptag">Interior y exterior</span>
+    </div>
+
+    <!-- 10 Silicona UV para Tableros -->
+    <div class="pc fu">
+      <span class="pbadge">Premium</span>
+      <div class="pico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></div>
+      <div class="pname">Silicona UV para Tableros</div>
+      <p class="pdesc">Brillo exclusivo con aroma premium. Protege tableros y plásticos del deterioro por rayos UV. Acabado mate o brillante de larga duración. Evita el cuarteamiento por el sol y el calor extremo.</p>
+      <span class="ptag">Interior premium</span>
+    </div>
+
+    <!-- 11 Renovador de Plásticos -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+      <div class="pname">Renovador de Plásticos</div>
+      <p class="pdesc">Renueva las superficies internas y externas con brillo exclusivo. Elimina el aspecto opaco y desgastado de plásticos, parachoques y molduras. Efecto duradero que restaura el color original.</p>
+      <span class="ptag">Interior y exterior</span>
+    </div>
+
+    <!-- 12 Lavado en Seco -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2"></path><path d="M12 6v6l4 2"></path></svg></div>
+      <div class="pname">Lavado en Seco</div>
+      <p class="pdesc">Mezcla de ceras premium para brillo exclusivo de la carrocería externa. Sin agua, sin rayones. Limpia y abrilla en un solo paso. Ideal para mantenimiento rápido entre lavados con agua.</p>
+      <span class="ptag">Carrocería</span>
+    </div>
+
+    <!-- 13 Siliconas de Llantas Premium -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></div>
+      <div class="pname">Silicona de Llantas Premium</div>
+      <p class="pdesc">Protege y renueva el aspecto de las llantas con un brillo profundo y duradero. Repele el agua y los rayos UV. Acabado de showroom que impresiona desde el primer vistazo.</p>
+      <span class="ptag">Llantas</span>
+    </div>
+
+    <!-- 14 Limpia Parabrisas -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+      <div class="pname">Limpia Parabrisas</div>
+      <p class="pdesc">Limpieza profunda del parabrisas y vidrios interiores y exteriores. Elimina grasa, insectos y suciedad dejando una visibilidad perfecta. Sin rayas, sin residuos. Seguridad en cada viaje.</p>
+      <span class="ptag">Vidrios</span>
+    </div>
+
+    <!-- 15 Shampoo 3 en 1 -->
+    <div class="pc fu">
+      <div class="pico"><svg viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div>
+      <div class="pname">Shampoo 3 en 1</div>
+      <p class="pdesc">Contiene cera y aroma premium. Lava, abrilla y protege en un solo paso. Fórmula suave que preserva el brillo de la pintura y deja un acabado brillante y aromatizado de larga duración.</p>
+      <span class="ptag">Carrocería</span>
+    </div>
+
+    <!-- CTA Extra -->
+    <div class="pc fu" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:transparent;border:1px dashed rgba(232,200,74,.22)">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;text-transform:uppercase;margin-bottom:10px;color:var(--yellow)">¿Otro producto?</div>
+      <p style="font-size:13px;color:rgba(242,240,234,.45);margin-bottom:22px;line-height:1.6">Contamos con toda la línea de elegancia automotriz. Consúltanos por cualquier necesidad específica.</p>
+      <a href="https://wa.link/yx35sb" class="bp" target="_blank" style="font-size:12px;padding:12px 22px">Consultar ahora</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PARA QUIEN -->
+<section id="para-quien" aria-label="Soluciones por cliente Walotech">
+  <div class="slabel">Soluciones por cliente</div>
+  <h2 class="dc stitle fu">¿Tu negocio<br>es uno de estos?</h2>
+  <p class="ssub fu">Trabajamos con clientes exclusivos que exigen calidad, resultados y atención de primer nivel.</p>
+  <div class="tgrid">
+    <div class="titem fu"><div class="tnum">01</div><div class="tname">Talleres Mecánicos</div><p class="tdesc">Desengrasantes de alto rendimiento para uso diario. Reduce costos y mejora la presentación de cada trabajo entregado al cliente.</p></div>
+    <div class="titem fu"><div class="tnum">02</div><div class="tname">Car Wash y Detailers</div><p class="tdesc">Silicona, desengrasantes y lavado en seco para un resultado impecable. Tus clientes notarán la diferencia desde la primera visita.</p></div>
+    <div class="titem fu"><div class="tnum">03</div><div class="tname">Flotas Empresariales</div><p class="tdesc">Suministro mensual, facturación corporativa y atención personalizada. Para empresas de transporte, logística y servicios.</p></div>
+    <div class="titem fu"><div class="tnum">04</div><div class="tname">Pollerías y Restaurantes</div><p class="tdesc">Master Saca Grasas y desengrasantes industriales para cocinas exigentes. Limpieza profunda de campanas, hornos y equipos de cocina.</p></div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="como-funciona" aria-label="Cómo comprar en Walotech">
+  <div class="slabel">Proceso de compra</div>
+  <h2 class="dc stitle fu">Más fácil que<br>lavar un auto.</h2>
+  <p class="ssub fu">De tu mensaje a los productos en tus manos. Sin complicaciones ni demoras.</p>
+  <div class="fsteps">
+    <div class="step fu"><div class="snum">1</div><div class="stitle2">Nos escribes</div><p class="sdesc">Por WhatsApp o TikTok. Respondemos en menos de 30 minutos en horario de atención comercial.</p></div>
+    <div class="step fu"><div class="snum">2</div><div class="stitle2">Te asesoramos</div><p class="sdesc">Te recomendamos el producto exacto para tu tipo de trabajo, vehículo o necesidad. Gratis y sin compromiso.</p></div>
+    <div class="step fu"><div class="snum">3</div><div class="stitle2">Cotización clara</div><p class="sdesc">Precio justo, sin letra chica. Descuentos desde el primer pedido por volumen.</p></div>
+    <div class="step fu"><div class="snum">4</div><div class="stitle2">Recibes y listo</div><p class="sdesc">Entrega en Lima o envíos a provincias por agencias Shalom y Flores. Tu negocio nunca se queda sin stock.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" aria-label="Testimonios Walotech">
+  <div class="slabel">Lo que dicen nuestros clientes</div>
+  <h2 class="dc stitle fu">Resultados reales,<br>clientes reales.</h2>
+  <div class="tegrid">
+    <div class="tecard fu">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="tquote">"El desengrasante dieléctrico me salvó más de un trabajo eléctrico. Limpia perfecto sin arruinar nada. Ya no uso otra cosa."</p>
+      <div class="tauth"><div class="tav">JM</div><div><div class="tname2">Juan Medina</div><div class="trole">Electricista automotriz · Lima</div></div></div>
+    </div>
+    <div class="tecard fu">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="tquote">"La silicona UV deja tableros y plásticos como nuevos. Mis clientes de detailing siempre preguntan qué uso. La respuesta siempre es: Walotech."</p>
+      <div class="tauth"><div class="tav">RV</div><div><div class="tname2">Renato Vargas</div><div class="trole">Detailer profesional · San Isidro</div></div></div>
+    </div>
+    <div class="tecard fu">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="tquote">"Compramos para nuestra flota de 40 unidades. Precio justo, entrega puntual y la crema limpia manos es clave para nuestros técnicos."</p>
+      <div class="tauth"><div class="tav">PC</div><div><div class="tname2">Patricia Cruz</div><div class="trole">Jefa de Flota · Empresa logística</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div id="cta-central" aria-label="Contacto Walotech">
+  <h2 class="ctitle">¿Listo para limpiar<br>como los pros?</h2>
+  <p class="csub">Escríbenos ahora. Desengrasantes, siliconas, limpia grasas y manos. La marca automotriz que más crece en TikTok.</p>
+  <div class="cact">
+    <a href="https://wa.link/yx35sb" class="bw" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.855L.057 23.885a.5.5 0 0 0 .604.605l6.08-1.476A11.935 11.935 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.935 9.935 0 0 1-5.06-1.38l-.36-.214-3.74.981.997-3.65-.235-.374A9.968 9.968 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+      Escribir por WhatsApp
+    </a>
+    <a href="https://www.tiktok.com/@walotech.desengrasante" class="bd" target="_blank">Ver TikTok</a>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" aria-label="Preguntas frecuentes Walotech">
+  <div class="slabel">FAQ</div>
+  <h2 class="dc stitle fu">Tus dudas,<br>resueltas.</h2>
+  <div class="flist">
+    <div class="fitem fu"><div class="fq">¿El desengrasante dieléctrico es seguro para todos los autos?</div><p class="fa">Sí. Está formulado para sistemas eléctricos y electrónicos automotrices. No conduce electricidad y no daña sensores, conectores ni circuitos modernos.</p></div>
+    <div class="fitem fu"><div class="fq">¿Hacen envíos fuera de Lima?</div><p class="fa">Sí. Hacemos envíos a todo el Perú por agencias Shalom y Flores. Costo y tiempo varían según ciudad. Escríbenos por WhatsApp para coordinar tu envío.</p></div>
+    <div class="fitem fu"><div class="fq">¿Tienen precio por volumen para empresas?</div><p class="fa">Sí. Trabajamos con precios ajustados según el volumen y la frecuencia de compra de cada cliente. Escríbenos y te hacemos una cotización personalizada para tu operación.</p></div>
+    <div class="fitem fu"><div class="fq">¿La Crema Limpia Manos funciona en las manos y la ropa de trabajo?</div><p class="fa">Sí. Es especialmente efectiva para las manos y también en ropa de trabajo, uniformes y tapizados con manchas de grasa y aceite. Aplica directo, espera unos minutos y lava normal.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="fbrand">
+      <div class="flogo">WALOTECH</div>
+      <div class="fsub">Desengrasantes · Siliconas · Limpia Grasas · Limpia Manos</div>
+      <p>Desengrasante dieléctrico, siliconas premium, limpia grasas, removedor de ceras y más. Productos de elegancia automotriz para profesionales del sector en Lima, Perú.</p>
+    </div>
+    <div class="flinks">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Desengrasante Premium Dieléctrico</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Desengrasante Industrial</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Master Saca Grasas</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Crema Limpia Manos</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Silicona UV para Tableros</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#productos">Shampoo 3 en 1</a></li>
+      </ul>
+    </div>
+    <div class="flinks">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#para-quien">Soluciones</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#testimonios">Clientes</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#faq">Preguntas frecuentes</a></li>
+      </ul>
+    </div>
+    <div class="flinks">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="https://wa.link/yx35sb" target="_blank">WhatsApp directo</a></li>
+        <li><a href="https://www.tiktok.com/@walotech.desengrasante" target="_blank">TikTok @walotech.desengrasante</a></li>
+        <li><a href="https://tourmaline-platypus-b32cf6.netlify.app/#">Lima, Perú</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbottom">
+    <p>© 2025 Walotech · Desengrasantes · Siliconas · Limpia Grasas · Lima, Perú</p>
+    <p style="font-size:11px;color:var(--muted)">desengrasante dieléctrico · siliconas premium · limpia grasas · limpia manos · removedor ceras · shampoo automotriz</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="waf" href="https://wa.link/yx35sb" target="_blank" aria-label="Contactar Walotech por WhatsApp">
+  <span class="walbl">¡Escríbenos ahora!</span>
+  <div class="wabtn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.554 4.122 1.523 5.855L.057 23.885a.5.5 0 0 0 .604.605l6.08-1.476A11.935 11.935 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.935 9.935 0 0 1-5.06-1.38l-.36-.214-3.74.981.997-3.65-.235-.374A9.968 9.968 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"></path></svg>
+  </div>
+</a>
+
+<script>
+  const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('v'),i*90);obs.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+
+
+</body></html>

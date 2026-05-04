@@ -42,6 +42,20 @@
 
     /* HERO */
     #hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:110px 40px 80px;position:relative;overflow:hidden}
+    #hero::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:0;
+      transform:translateX(-50%);
+      width:min(40vw,500px);
+      height:min(86vh,700px);
+      background:url('./images/perrito-mecanico.png') center/contain no-repeat;
+      opacity:.38;
+      z-index:0;
+      pointer-events:none;
+      filter:drop-shadow(0 24px 36px rgba(0,0,0,.45));
+    }
     .hbg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 55% at 60% 35%,rgba(232,200,74,.07) 0%,transparent 70%),radial-gradient(ellipse 35% 45% at 15% 65%,rgba(232,200,74,.04) 0%,transparent 60%)}
     .hstripes{position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(-60deg,rgba(232,200,74,.018) 0px,rgba(232,200,74,.018) 1px,transparent 1px,transparent 44px)}
     #hero > *:not(.hbg):not(.hstripes):not(.hstats):not(.hscroll){position:relative;z-index:1}
@@ -186,6 +200,7 @@
       .ncta{padding:9px 14px;font-size:11px}
       #hero,section{padding-left:20px;padding-right:20px}
       #hero{padding-top:96px;padding-bottom:44px;justify-content:flex-start;min-height:auto}
+      #hero::before{bottom:0;width:min(80vw,340px);height:min(60vh,520px);opacity:.33}
       .hlabel{margin-bottom:4px}
       h1.htitle{margin-bottom:8px}
       .hsub{margin-bottom:24px}

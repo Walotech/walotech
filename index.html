@@ -61,6 +61,8 @@
     .hlabel{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow);margin-bottom:22px;display:flex;align-items:center;gap:12px}
     .hlabel::before{content:'';width:30px;height:2px;background:linear-gradient(90deg,var(--yellow),var(--yellow2))}
     h1.htitle{font-size:clamp(52px,9.8vw,122px);margin-bottom:12px}
+    .hrotor{display:inline-block;min-width:4.8ch;color:var(--yellow);text-shadow:0 0 18px rgba(232,200,74,.28);transition:opacity .25s ease,transform .25s ease}
+    .hrotor.o{opacity:0;transform:translateY(8px)}
     .bword{position:relative;display:inline-block;color:var(--white)}
     .bword::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--yellow) 0%,var(--yellow2) 60%,transparent 100%);border-radius:1px}
     .hsub{max-width:500px;font-size:17px;font-weight:300;color:rgba(242,240,234,.65);margin-bottom:44px;line-height:1.65}
@@ -103,7 +105,19 @@
 
     /* PRODUCTS */
     #productos{background:var(--deep)}
-    .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+    .pcar{position:relative;padding-bottom:34px}
+    .pcarbtn{position:absolute;top:-72px;width:46px;height:46px;border-radius:50%;border:1px solid rgba(232,200,74,.45);background:rgba(24,24,24,.92);color:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:27px;line-height:1;cursor:pointer;transition:all .2s;z-index:3;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+    .pcarbtn:hover{background:rgba(232,200,74,.2);border-color:var(--yellow)}
+    .pcarbtn.prev{right:58px}
+    .pcarbtn.next{right:0}
+    .pviewport{overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding-bottom:12px}
+    .pviewport::-webkit-scrollbar{height:8px}
+    .pviewport::-webkit-scrollbar-thumb{background:rgba(232,200,74,.28);border-radius:999px}
+    .pgrid{display:flex;gap:18px;width:max-content}
+    .pgrid .pc{flex:0 0 min(280px,82vw);scroll-snap-align:start}
+    .pdots{position:absolute;left:50%;bottom:0;transform:translateX(-50%);display:flex;align-items:center;gap:8px}
+    .pdot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(242,240,234,.35);cursor:pointer;transition:all .2s}
+    .pdot.a{width:24px;border-radius:10px;background:var(--yellow)}
     .pc{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:30px 26px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s}
     .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--yellow),var(--yellow2),transparent);opacity:0;transition:opacity .25s}
     .pc:hover{transform:translateY(-4px);border-color:rgba(232,200,74,.22)}
@@ -202,6 +216,7 @@
       .hmascot{bottom:0;width:min(80vw,340px);height:min(60vh,520px);opacity:.42}
       .hlabel{margin-bottom:4px}
       h1.htitle{margin-bottom:8px}
+      .hrotor{min-width:4.2ch}
       .hsub{margin-bottom:24px}
       .hstats{position:static;margin-top:26px;display:flex;flex-direction:row;justify-content:space-between;align-items:flex-start;width:100%;gap:14px}
       .hstat .num{font-size:38px}
@@ -214,6 +229,11 @@
       .wabtn svg{width:28px;height:28px}
       .hstats{padding-right:72px}
       .fsteps::after{display:none}
+      .pcar{padding-bottom:30px}
+      .pcarbtn{top:auto;bottom:-12px;width:40px;height:40px;font-size:24px}
+      .pcarbtn.prev{left:0;right:auto}
+      .pcarbtn.next{right:0}
+      .pdots{bottom:-2px}
     }
     @media(min-width:769px){
       #hero{padding-right:40px}
@@ -250,7 +270,7 @@
   <div class="hmascot" aria-hidden="true"></div>
   <div class="hlabel">Elegancia Automotriz · Lima, Perú</div>
   <h1 class="dc htitle">
-    <span class="bword">WALOTECH</span><br>limpia diferente.
+    <span class="bword">WALOTECH</span><br>limpia <span class="hrotor" id="rotating-word">diferente</span>.
   </h1>
   <p class="hsub">Desengrasantes dieléctrico, siliconas premium, limpia grasas y limpia manos. Productos automotrices de alto rendimiento para talleres, flotas y profesionales del sector.</p>
   <div class="hact">
@@ -297,6 +317,10 @@
   <div class="slabel">Línea de productos</div>
   <h2 class="dc stitle fu">Productos que<br>hablan solos.</h2>
   <p class="ssub fu">15 formulaciones de alto rendimiento para profesionales. Desengrasantes, siliconas, limpia grasas y más. Desde el primer uso notarás la diferencia.</p>
+  <div class="pcar" data-carousel>
+  <button class="pcarbtn prev" type="button" data-dir="prev" aria-label="Ver productos anteriores">‹</button>
+  <button class="pcarbtn next" type="button" data-dir="next" aria-label="Ver siguientes productos">›</button>
+  <div class="pviewport">
   <div class="pgrid">
 
     <!-- 1 Desengrasante Premium Dieléctrico -->
@@ -430,6 +454,9 @@
     </div>
 
   </div>
+  </div>
+  <div class="pdots" aria-label="Paginacion de productos"></div>
+  </div>
 </section>
 
 <!-- PARA QUIEN -->
@@ -559,6 +586,77 @@
 <script>
   const obs=new IntersectionObserver((entries)=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('v'),i*90);obs.unobserve(e.target)}})},{threshold:.1});
   document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+  const rotatingWord=document.getElementById('rotating-word');
+  if(rotatingWord){
+    const words=['diferente','premium','profesional','impecable'];
+    let idx=0;
+    setInterval(()=>{
+      rotatingWord.classList.add('o');
+      setTimeout(()=>{
+        idx=(idx+1)%words.length;
+        rotatingWord.textContent=words[idx];
+        rotatingWord.classList.remove('o');
+      },220);
+    },2400);
+  }
+
+  document.querySelectorAll('[data-carousel]').forEach((carousel)=>{
+    const viewport=carousel.querySelector('.pviewport');
+    const track=carousel.querySelector('.pgrid');
+    const prev=carousel.querySelector('[data-dir="prev"]');
+    const next=carousel.querySelector('[data-dir="next"]');
+    const dots=carousel.querySelector('.pdots');
+    if(!viewport||!track||!prev||!next||!dots)return;
+
+    const cards=[...track.querySelectorAll('.pc')];
+    const maxIndex=Math.max(cards.length-1,0);
+    let current=0;
+    let timer=null;
+    const step=()=>Math.max(Math.floor(viewport.clientWidth*.85),280);
+
+    dots.innerHTML=cards.map((_,i)=>`<button class="pdot${i===0?' a':''}" type="button" aria-label="Ir al producto ${i+1}"></button>`).join('');
+    const dotEls=[...dots.querySelectorAll('.pdot')];
+
+    const goTo=(index)=>{
+      current=Math.max(0,Math.min(index,maxIndex));
+      const card=cards[current];
+      if(card){
+        viewport.scrollTo({left:card.offsetLeft,behavior:'smooth'});
+      }
+      dotEls.forEach((d,i)=>d.classList.toggle('a',i===current));
+    };
+
+    const updateCurrentByScroll=()=>{
+      const center=viewport.scrollLeft+viewport.clientWidth*.45;
+      let closest=0;
+      let distance=Infinity;
+      cards.forEach((card,i)=>{
+        const d=Math.abs(card.offsetLeft-center);
+        if(d<distance){distance=d;closest=i;}
+      });
+      current=closest;
+      dotEls.forEach((d,i)=>d.classList.toggle('a',i===current));
+    };
+
+    const stopAuto=()=>{ if(timer){ clearInterval(timer); timer=null; } };
+    const startAuto=()=>{
+      stopAuto();
+      if(cards.length<2)return;
+      timer=setInterval(()=>{ goTo((current+1)%cards.length); },3200);
+    };
+
+    prev.addEventListener('click',()=>{ stopAuto(); goTo(current-1); startAuto(); });
+    next.addEventListener('click',()=>{ stopAuto(); goTo(current+1); startAuto(); });
+    dotEls.forEach((dot,i)=>dot.addEventListener('click',()=>{ stopAuto(); goTo(i); startAuto(); }));
+    viewport.addEventListener('scroll',updateCurrentByScroll,{passive:true});
+    carousel.addEventListener('mouseenter',stopAuto);
+    carousel.addEventListener('mouseleave',startAuto);
+    carousel.addEventListener('touchstart',stopAuto,{passive:true});
+    carousel.addEventListener('touchend',startAuto,{passive:true});
+
+    startAuto();
+  });
 </script>
 
 

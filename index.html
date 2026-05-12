@@ -1571,74 +1571,98 @@
 
       #hero {
         padding-top: 76px;
-        padding-bottom: 0;
+        padding-bottom: 30px;
         min-height: auto;
-        grid-template-rows: auto auto
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start
       }
 
       .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
         text-align: center
       }
 
       .htext-col {
-        order: 1
+        display: contents
+      }
+
+      .hlabel {
+        order: 1;
+        justify-content: center;
+        margin-bottom: 4px
+      }
+
+      h1.htitle {
+        order: 2;
+        font-size: clamp(26px, 8vw, 42px);
+        margin-bottom: 12px
       }
 
       .hvideo-col {
-        order: 2
+        order: 3;
+        margin: 16px 0 24px
+      }
+
+      .hact {
+        order: 4;
+        justify-content: center;
+        margin-bottom: 24px
+      }
+
+      .hlink-wrap {
+        order: 5;
+        margin: 0 auto 16px !important
+      }
+
+      .hsub {
+        order: 6;
+        margin: 0 auto 12px;
+        font-size: 13px
+      }
+
+      .hspot {
+        order: 7;
+        margin: 0 auto 20px;
+        font-size: 10px
       }
 
       .hmascot {
         display: none
       }
 
-      .hlabel {
-        justify-content: center;
-        margin-bottom: 8px
-      }
-
-      h1.htitle {
-        font-size: clamp(34px, 10vw, 52px);
-        margin-bottom: 10px
-      }
-
       .hrotor {
         min-width: 4.2ch
       }
 
-      .hsub {
-        margin: 0 auto 10px;
-        font-size: 14px
-      }
-
-      .hspot {
-        margin: 0 auto 20px;
-        font-size: 10px
-      }
-
-      .hact {
-        justify-content: center
-      }
-
       .hvideo-frame {
-        max-width: 240px
+        max-width: 280px;
+        margin: 0 auto
       }
 
       .hstats {
+        position: absolute;
+        right: 12px;
+        top: 45%;
+        transform: translateY(-50%);
+        flex-direction: column;
         gap: 20px;
-        padding: 20px 0 24px;
-        flex-wrap: wrap
+        padding: 0;
+        z-index: 10
       }
 
       .hstat .num {
-        font-size: 32px
+        font-size: 26px;
+        line-height: 1
       }
 
       .hstat .lbl {
         font-size: 8px;
-        letter-spacing: .1em
+        letter-spacing: .08em;
+        text-align: right;
+        max-width: 60px
       }
 
       #cta-central,
@@ -1759,6 +1783,10 @@
           de alto rendimiento para talleres, flotas y profesionales.</p>
         <p class="hspot">Top ventas que más mueven mercadería:<span>Premium Dieléctrico · Crema Manos · Renovador plásticos
             · Industrial Plus · Silicona Cristal · Multipropósito.</span></p>
+        <div class="hlink-wrap" style="margin-top:0;margin-bottom:22px;max-width:520px">
+          <a href="#productos" class="ptag" style="cursor:pointer;text-decoration:none">Ver catálogo y precios por
+            WhatsApp</a>
+        </div>
         <div class="hact">
           <a href="https://api.whatsapp.com/send?phone=51955781881&text=%2A%F0%9F%91%8B%C2%A1Hola!%20mi%20Nombre%20es%3A%20%7B..............%7D%2A%0A%2AQuisiera%20cotizar%3A%20%7Bproducto%7D%2A%0A%2A%C2%BFMe%20puedes%20dar%20m%C3%A1s%20detalles%3F%2A"
             class="bp" target="_blank" rel="noopener noreferrer">

@@ -1788,8 +1788,7 @@
         <p class="hspot">Top ventas que más mueven mercadería:<span>Premium Dieléctrico · Crema Manos · Renovador plásticos
             · Industrial Plus · Silicona Cristal · Multipropósito.</span></p>
         <div class="hlink-wrap" style="margin-top:0;margin-bottom:22px;max-width:520px">
-          <a href="#productos" class="ptag" style="cursor:pointer;text-decoration:none">Ver catálogo y precios por
-            WhatsApp</a>
+          <a href="#productos" class="ptag" style="cursor:pointer;text-decoration:none">Ver todos los productos</a>
         </div>
         <div class="hact">
           <a href="https://api.whatsapp.com/send?phone=51955781881&text=%2A%F0%9F%91%8B%C2%A1Hola!%20mi%20Nombre%20es%3A%20%7B..............%7D%2A%0A%2AQuisiera%20cotizar%3A%20%7Bproducto%7D%2A%0A%2A%C2%BFMe%20puedes%20dar%20m%C3%A1s%20detalles%3F%2A"
@@ -1892,36 +1891,9 @@
     <div class="slabel">Línea de productos</div>
     <h2 class="dc stitle fu">Productos que<br>hablan solos.</h2>
     <p class="ssub fu">17 formulaciones de alto rendimiento para profesionales. Los <strong>seis más pedidos por
-        taller</strong> aparecen primero en el carrusel, todos con foto real del catálogo.</p>
+        taller</strong> aparecen primero en el carrusel.</p>
 
-    <!-- CATALOGOS (2 imágenes) -->
-    <div class="pcat fu" aria-label="Catálogos Walotech">
-      <a href="./images/catalogos/catalogo-desengrasantes-y-limpiadores.png" data-lightbox="catalogo"
-        data-title="Catálogo — Desengrasantes y limpiadores">
-        <div class="pcatcard">
-          <div class="pcatimg"><img src="./images/catalogos/catalogo-desengrasantes-y-limpiadores.png"
-              alt="Catálogo Walotech: Desengrasantes y limpiadores" loading="lazy" decoding="async"></div>
-          <div class="pcatmeta">
-            <div class="pcatt">Catálogo: Desengrasantes y limpiadores</div>
-            <div class="pcats">Ver en grande y comparte por WhatsApp en segundos. Ideal para que el cliente elija
-              rápido.</div>
-            <div class="pcatcta"><span class="ptag">Abrir catálogo</span></div>
-          </div>
-        </div>
-      </a>
-      <a href="./images/catalogos/catalogo-siliconas-y-ceras.png" data-lightbox="catalogo"
-        data-title="Catálogo — Siliconas y ceras premium">
-        <div class="pcatcard">
-          <div class="pcatimg"><img src="./images/catalogos/catalogo-siliconas-y-ceras.png"
-              alt="Catálogo Walotech: Siliconas y ceras premium" loading="lazy" decoding="async"></div>
-          <div class="pcatmeta">
-            <div class="pcatt">Catálogo: Siliconas y ceras premium</div>
-            <div class="pcats">Muestra “antes y después” + beneficios en un solo vistazo. Perfecto para convertir.</div>
-            <div class="pcatcta"><span class="ptag">Abrir catálogo</span></div>
-          </div>
-        </div>
-      </a>
-    </div>
+
 
     <div class="pbest fu" role="note" aria-label="Productos más vendidos Walotech">
       <div class="pbestlbl">Top ventas · lo que más piden tus clientes</div>
@@ -2015,7 +1987,7 @@
             <div class="pname">Silicona Cristal Automotriz</div>
             <p class="pdesc">Silicona cristal con secado al instante y brillo exclusivo: aroma + efecto showroom en
               tableros, gomas y plásticos donde el cliente mira primero.</p>
-            <span class="ptag">Interior · acabados</span>
+            <span class="ptag">Estetica de motores e Acabados Interiores</span>
             <a href="https://api.whatsapp.com/send?phone=51955781881&text=%2A%F0%9F%91%8B%C2%A1Hola!%20mi%20Nombre%20es%3A%20%7B..............%7D%2A%0A%2AQuisiera%20cotizar%3A%20Silicona%20Cristal%20Automotriz%2A%0A%2A%C2%BFMe%20puedes%20dar%20m%C3%A1s%20detalles%3F%2A"
               class="pwa" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24">
                 <path
@@ -2250,18 +2222,7 @@
     </div>
   </section>
 
-  <!-- LIGHTBOX (Catálogos) -->
-  <div class="lbx" id="catalog-lightbox" aria-hidden="true">
-    <div class="lbxbox" role="dialog" aria-modal="true" aria-label="Visor de catálogo">
-      <div class="lbxtop">
-        <div class="lbxh" id="lbx-title">Catálogo</div>
-        <button class="lbxbtn" type="button" id="lbx-close">Cerrar</button>
-      </div>
-      <div class="lbximg">
-        <img id="lbx-img" alt="Catálogo Walotech">
-      </div>
-    </div>
-  </div>
+
 
   <!-- PARA QUIEN -->
   <section id="para-quien" aria-label="Soluciones por cliente Walotech">
@@ -2596,43 +2557,6 @@
       }, { rootMargin: '250px 0px' });
 
       o.observe(v);
-    })();
-
-    // Catalog lightbox
-    (function initCatalogLightbox() {
-      const lbx = document.getElementById('catalog-lightbox');
-      const img = document.getElementById('lbx-img');
-      const title = document.getElementById('lbx-title');
-      const close = document.getElementById('lbx-close');
-      if (!lbx || !img || !close || !title) return;
-
-      const open = (src, t) => {
-        title.textContent = t || 'Catálogo';
-        img.src = src;
-        lbx.classList.add('o');
-        lbx.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      };
-      const shut = () => {
-        lbx.classList.remove('o');
-        lbx.setAttribute('aria-hidden', 'true');
-        img.removeAttribute('src');
-        document.body.style.overflow = '';
-      };
-
-      document.querySelectorAll('a[data-lightbox=\"catalogo\"]').forEach((a) => {
-        a.addEventListener('click', (e) => {
-          e.preventDefault();
-          const src = a.getAttribute('href') || '';
-          const t = a.getAttribute('data-title') || '';
-          if (!src) return;
-          open(src, t);
-        });
-      });
-
-      close.addEventListener('click', shut);
-      lbx.addEventListener('click', (e) => { if (e.target === lbx) shut(); });
-      window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lbx.classList.contains('o')) shut(); });
     })();
 
     document.querySelectorAll('[data-carousel]').forEach((carousel) => {

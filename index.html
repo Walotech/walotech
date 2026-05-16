@@ -1535,12 +1535,30 @@
       }
 
       .nlinks {
-        display: none
+        display: flex;
+        gap: 14px;
+        margin: 0 8px;
+        list-style: none;
+        align-items: center;
+      }
+
+      .nlinks li {
+        display: none;
+      }
+
+      .nlinks li.m-show {
+        display: block;
+      }
+
+      .nlinks a {
+        font-size: 10px;
+        font-weight: 700;
+        white-space: nowrap;
       }
 
       .nlogo {
         gap: 1px;
-        max-width: 66%
+        max-width: 45%
       }
 
       .nword {
@@ -1761,7 +1779,8 @@
       <span class="nsub">Desengrasantes · Siliconas · Limpia Grasas · Limpia Manos</span>
     </a>
     <ul class="nlinks">
-      <li><a href="#productos">Productos</a></li>
+      <li class="m-show"><a href="#hero">Inicio</a></li>
+      <li class="m-show"><a href="#productos">Productos</a></li>
       <li><a href="#para-quien">Soluciones</a></li>
       <li><a href="#como-funciona">Proceso</a></li>
       <li><a href="#testimonios">Clientes</a></li>

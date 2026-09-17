@@ -13,6 +13,8 @@
     content="desengrasante automotriz lima, sacagrasa peru, silicona automotriz, limpieza automotriz, desengrasante dielectrico, walotech, productos automotrices peru">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://walotech.pe/">
+  <link rel="icon" type="image/jpeg" href="./favicon.jpg">
+  <link rel="apple-touch-icon" href="./favicon.jpg">
   <meta property="og:title" content="Walotech | Limpieza Automotriz Premium">
   <meta property="og:description"
     content="Desengrasantes, sacagrasa, silicona y más. Productos de elegancia automotriz para profesionales del sector.">
@@ -141,6 +143,102 @@
 
     .nlinks a:hover {
       color: var(--yellow)
+    }
+
+    /* NAV DROPDOWN STYLING */
+    .dropdown {
+      position: relative;
+    }
+
+    .nav-item-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .nav-triangle {
+      font-size: 7px;
+      color: var(--muted);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+      pointer-events: none;
+      display: inline-block;
+      margin-top: 1px;
+    }
+
+    .dropdown.active .nav-triangle,
+    .dropdown:hover .nav-triangle {
+      color: var(--yellow);
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      transform: translateX(-50%) translateY(12px);
+      width: 580px;
+      background: rgba(12, 12, 12, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 20px;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+      z-index: 1000;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 30px rgba(232, 200, 74, 0.05);
+    }
+
+    .dropdown-menu::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 12px;
+      height: 12px;
+      background: rgba(12, 12, 12, 0.95);
+      border-left: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+    }
+
+    .dropdown-menu.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu li {
+      width: 100%;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      color: var(--muted) !important;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: var(--rs);
+      transition: all 0.25s ease;
+      white-space: normal;
+      text-align: left;
+      border-left: 2px solid transparent;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(232, 200, 74, 0.08) !important;
+      color: var(--yellow) !important;
+      border-left-color: var(--yellow);
+      padding-left: 18px;
     }
 
     .ncta {
